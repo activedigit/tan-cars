@@ -229,7 +229,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
   </div>
 
-  <footer>TAN Luxury Motors · לתיאום: <a href="tel:0523800727">052-3800727</a> · <a href="https://wa.me/972523800727" target="_blank">וואטסאפ</a></footer>
+  <footer>TAN Luxury Motors · לתיאום: <a href="tel:0523800727">052-3800727</a> · <a href="https://wa.me/972523800727" target="_blank">וואטסאפ</a> &middot; <a href="accessibility.html">הצהרת נגישות</a> &middot; <a href="privacy.html">מדיניות פרטיות</a></footer>
 </div>
 
 <!-- WhatsApp lead popup -->
@@ -243,6 +243,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <input id="waPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="הטלפון שלך">
       <button class="modal-send" type="submit"><svg class="wico"><use href="#wa"></use></svg>שלח בוואטסאפ</button>
       <p class="modal-note" id="waNote"></p>
+      <p class="modal-consent">בשליחה אני מאשר/ת את <a href="privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a></p>
     </form>
   </div>
 </div>
@@ -281,5 +282,112 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   }
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeWA(); });
 </script>
+<!-- ===== TAN compliance kit: accessibility widget + cookie notice ===== -->
+<style>
+  .a11y-fab{position:fixed;bottom:16px;left:16px;z-index:99990;width:52px;height:52px;border-radius:50%;border:2px solid #fff;
+    background:#1b4ba3;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.5);padding:0}
+  .a11y-fab:hover{filter:brightness(1.12)}
+  .a11y-fab svg{width:30px;height:30px;fill:#fff}
+  .a11y-fab:focus-visible,.a11y-panel button:focus-visible,.a11y-panel a:focus-visible,.cookiebar button:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}
+  body.cookie-open .a11y-fab,body.cookie-open .a11y-panel{bottom:86px}
+  .a11y-panel{position:fixed;bottom:16px;left:16px;z-index:99991;width:272px;max-width:calc(100vw - 32px);background:#111;color:#fff;
+    border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:14px 14px 12px;box-shadow:0 18px 50px rgba(0,0,0,.6);
+    font-family:'Assistant',sans-serif;direction:rtl}
+  .a11y-panel[hidden]{display:none}
+  .a11y-panel h2{font-size:16px;font-weight:800;margin:0 0 11px;display:flex;justify-content:space-between;align-items:center}
+  .a11y-panel .x{background:none;border:0;color:#fff;font-size:23px;line-height:1;cursor:pointer;padding:0 4px}
+  .a11y-row{display:flex;gap:8px;margin-bottom:8px}
+  .a11y-panel button.opt{flex:1;background:#1e1e22;color:#fff;border:1px solid rgba(255,255,255,.28);border-radius:9px;padding:10px 6px;
+    font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+  .a11y-panel button.opt:hover{background:#2a2a30}
+  .a11y-panel button.opt[aria-pressed="true"]{background:#ffd54a;color:#141414;border-color:#ffd54a}
+  .a11y-panel button.full{width:100%}
+  .a11y-panel a.state{display:block;text-align:center;color:#ffd54a;font-weight:700;text-decoration:underline;margin-top:10px;font-size:13.5px}
+  .a11y-panel .reset{background:none;border:0;color:#bcbcc2;text-decoration:underline;cursor:pointer;font-family:inherit;font-size:12.5px;margin-top:9px;width:100%}
+  html.a11y-contrast{--bg:#000;--bg-2:#000;--ink:#fff;--muted:#fff;--gold:#ff0;--gold-2:#ff0;--gold-deep:#ff0;--line:#fff}
+  html.a11y-contrast body{background:#000 !important;background-image:none !important}
+  html.a11y-contrast .card,html.a11y-contrast .leadcard,html.a11y-contrast .modal-box,html.a11y-contrast .policy,
+  html.a11y-contrast .pic,html.a11y-contrast .carframe{background:#000 !important;border-color:#fff !important}
+  html.a11y-contrast h1,html.a11y-contrast h2,html.a11y-contrast p,html.a11y-contrast li,html.a11y-contrast .sub,
+  html.a11y-contrast .para,html.a11y-contrast .headline .w{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  html.a11y-contrast a,html.a11y-contrast .headline .g,html.a11y-contrast header h1 span,html.a11y-contrast .wordmark b,
+  html.a11y-contrast .policy h1{color:#ff0 !important;-webkit-text-fill-color:#ff0 !important}
+  html.a11y-noanim *,html.a11y-noanim *::before,html.a11y-noanim *::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  html.a11y-links a{text-decoration:underline !important}
+  @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}}
+  .cookiebar{position:fixed;left:0;right:0;bottom:0;z-index:99980;background:rgba(9,9,11,.97);border-top:1px solid rgba(201,164,90,.4);
+    color:#e8e8ea;font-family:'Assistant',sans-serif;font-size:13px;padding:12px 16px;display:flex;gap:12px 16px;align-items:center;
+    justify-content:center;flex-wrap:wrap;direction:rtl}
+  .cookiebar[hidden]{display:none}
+  .cookiebar a{color:#e9cd86;font-weight:700}
+  .cookiebar button{background:#c9a45a;color:#1a1304;border:0;border-radius:8px;padding:8px 20px;font-family:inherit;font-weight:800;font-size:13px;cursor:pointer}
+  .cookiebar button:hover{filter:brightness(1.07)}
+  .leadconsent{margin-top:10px;font-family:'Assistant',sans-serif;font-size:11.5px;line-height:1.55;color:#9a9aa0}
+  .leadconsent a{color:#e9cd86;font-weight:700}
+  .modal-consent{margin-top:9px;font-family:'Assistant',sans-serif;font-size:11px;line-height:1.5;color:#8a8a90;text-align:center}
+  .modal-consent a{color:#e9cd86;font-weight:700}
+</style>
+<button class="a11y-fab" type="button" id="a11yFab" aria-label="פתיחת תפריט נגישות" aria-haspopup="dialog" aria-expanded="false">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="3.6" r="2.1"/><path d="M12 7c-2.4 0-7 .5-7 .5v2s3.2-.3 5-.4v3.4L8 20.2h2l2-6 2 6h2l-2-7.5V9.1c1.8.1 5 .4 5 .4v-2S14.4 7 12 7z"/></svg>
+</button>
+<div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="הגדרות נגישות" hidden>
+  <h2>נגישות <button class="x" type="button" id="a11yClose" aria-label="סגירת התפריט">&times;</button></h2>
+  <div class="a11y-row">
+    <button class="opt" type="button" data-a="fs-down" aria-label="הקטנת גודל טקסט">א&#8722;</button>
+    <button class="opt" type="button" data-a="fs-up" aria-label="הגדלת גודל טקסט">א+</button>
+  </div>
+  <button class="opt full" type="button" data-a="contrast" aria-pressed="false">ניגודיות גבוהה</button>
+  <div style="height:8px"></div>
+  <button class="opt full" type="button" data-a="links" aria-pressed="false">הדגשת קישורים</button>
+  <div style="height:8px"></div>
+  <button class="opt full" type="button" data-a="motion" aria-pressed="false">עצירת אנימציות</button>
+  <a class="state" href="accessibility.html">להצהרת הנגישות המלאה</a>
+  <button class="reset" type="button" data-a="reset">איפוס הגדרות נגישות</button>
+</div>
+<div class="cookiebar" id="cookiebar" hidden>
+  <span>אתר זה משתמש בעוגיות ובפיקסלים (Meta, TikTok) לשיפור החוויה ולמדידת פרסום. <a href="privacy.html">מדיניות הפרטיות</a></span>
+  <button type="button" id="cookieOk">הבנתי</button>
+</div>
+<script>
+(function(){
+  var d=document,h=d.documentElement;
+  function g(k,def){try{var v=localStorage.getItem(k);return v===null?def:v;}catch(e){return def;}}
+  function s(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+  var STEPS=[1,1.12,1.26,1.4],fs=parseInt(g('a11yFs','0'),10)||0;
+  var st={contrast:g('a11yContrast','0')==='1',links:g('a11yLinks','0')==='1',motion:g('a11yMotion','0')==='1'};
+  var panel=d.getElementById('a11yPanel'),fab=d.getElementById('a11yFab');
+  function refresh(){
+    h.style.zoom=STEPS[fs]===1?'':STEPS[fs];
+    h.classList.toggle('a11y-contrast',st.contrast);
+    h.classList.toggle('a11y-links',st.links);
+    h.classList.toggle('a11y-noanim',st.motion);
+    panel.querySelector('[data-a="contrast"]').setAttribute('aria-pressed',st.contrast);
+    panel.querySelector('[data-a="links"]').setAttribute('aria-pressed',st.links);
+    panel.querySelector('[data-a="motion"]').setAttribute('aria-pressed',st.motion);
+    if(window.__a11yMotion)window.__a11yMotion();
+  }
+  function openP(){panel.hidden=false;fab.setAttribute('aria-expanded','true');}
+  function closeP(){panel.hidden=true;fab.setAttribute('aria-expanded','false');fab.focus();}
+  fab.addEventListener('click',function(){panel.hidden?openP():closeP();});
+  d.getElementById('a11yClose').addEventListener('click',closeP);
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden)closeP();});
+  panel.addEventListener('click',function(e){
+    var b=e.target.closest('[data-a]');if(!b)return;var a=b.getAttribute('data-a');
+    if(a==='fs-up')fs=Math.min(fs+1,STEPS.length-1);
+    else if(a==='fs-down')fs=Math.max(fs-1,0);
+    else if(a==='contrast')st.contrast=!st.contrast;
+    else if(a==='links')st.links=!st.links;
+    else if(a==='motion')st.motion=!st.motion;
+    else if(a==='reset'){fs=0;st.contrast=st.links=st.motion=false;}
+    s('a11yFs',fs);s('a11yContrast',st.contrast?'1':'0');s('a11yLinks',st.links?'1':'0');s('a11yMotion',st.motion?'1':'0');
+    refresh();
+  });
+  refresh();
+  var bar=d.getElementById('cookiebar');
+  if(g('a11yCookie','0')!=='1'){bar.hidden=false;d.body.classList.add('cookie-open');}
+  d.getElementById('cookieOk').addEventListener('click',function(){s('a11yCookie','1');bar.hidden=true;d.body.classList.remove('cookie-open');});
+})();
+</script>
+<!-- ===== end compliance kit ===== -->
 </body>
 </html>
