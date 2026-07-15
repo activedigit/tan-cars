@@ -13,7 +13,7 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--bg);color:var(--ink);font-family:'Heebo','Assistant',system-ui,sans-serif;-webkit-font-smoothing:antialiased;
     background-image:radial-gradient(80% 50% at 85% 0%, rgba(201,164,90,.1), transparent 55%);min-height:100vh}
-  .wrap{max-width:1140px;margin-inline:auto;padding:clamp(20px,5vw,40px)}
+  .wrap{max-width:1180px;margin-inline:auto;padding:clamp(20px,5vw,40px)}
   header{text-align:center;margin-bottom:clamp(22px,5vw,38px)}
   header .logo{height:clamp(52px,11vw,74px);margin-bottom:14px}
   header h1{font-weight:900;font-size:clamp(24px,5vw,40px);line-height:1.1}
@@ -31,12 +31,13 @@
   .card .tl{text-decoration:none;color:inherit}
   .card h2{font-size:clamp(17px,3vw,21px);font-weight:800}
   .card .sub{color:var(--muted);font-family:'Assistant';font-size:13px;margin-top:3px}
-  .qbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:14px;cursor:pointer;border:none;border-radius:11px;
+  .card .go{margin-top:9px;display:inline-flex;align-self:flex-start;align-items:center;gap:7px;color:var(--gold-2);font-weight:700;font-size:14px;text-decoration:none}
+  .card .go:hover{color:var(--gold)}
+  .sp{flex:1;min-height:14px}
+  .qbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;cursor:pointer;border:none;border-radius:11px;
     background:#25D366;color:#06301a;font-family:'Heebo';font-weight:800;font-size:15px;padding:12px 14px;transition:filter .15s}
   .qbtn:hover{filter:brightness(1.06)}
-  .qbtn svg{width:19px;height:19px;fill:#06301a;flex:none}
-  .card .go{margin-top:auto;padding-top:12px;display:inline-flex;align-items:center;gap:7px;color:var(--gold-2);font-weight:700;font-size:14px;text-decoration:none}
-  .card .go:hover{color:var(--gold)}
+  .wico{width:19px;height:19px;fill:#06301a;flex:none}
   footer{text-align:center;margin-top:34px;color:var(--muted);font-family:'Assistant';font-size:13.5px;border-top:1px solid var(--line);padding-top:22px}
   footer a{color:var(--gold-2);text-decoration:none;font-weight:700}
   /* WhatsApp lead popup */
@@ -56,7 +57,6 @@
   .modal-send{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:11px;cursor:pointer;border:none;border-radius:11px;
     background:#25D366;color:#06301a;font-family:'Heebo';font-weight:800;font-size:15px;padding:13px}
   .modal-send:hover{filter:brightness(1.06)}
-  .modal-send svg{width:19px;height:19px;fill:#06301a;flex:none}
   .modal-note{font-family:'Assistant';font-size:12.5px;color:#e79a9a;margin-top:9px;min-height:15px;text-align:center}
   .modal-note.ok{color:#3fd07d}
 </style>
@@ -92,6 +92,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <!-- TikTok Pixel Code End -->
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c2 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></symbol></svg>
 <div class="wrap">
   <header>
     <img class="logo" src="bmw-m5/logo.webp" alt="TAN Luxury Motors">
@@ -100,55 +101,132 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   </header>
 
   <div class="grid">
+
     <div class="card">
-      <a class="pic" href="bmw-m5/"><img src="bmw-m5/slide1.jpg" alt="BMW M5 2025" loading="lazy"><span class="badge">M5 · 2025</span></a>
+      <div class="pic"><img src="g/bmw-xm.jpg" alt="BMW XM 2026" loading="lazy"><span class="badge">XM · 2026</span></div>
+      <div class="body">
+        <h2>BMW XM</h2>
+        <div class="sub">SUV-על היברידי · M Performance · 2026</div>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('BMW XM 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="pic" href="bmw-m5/"><img src="g/bmw-m5.jpg" alt="BMW M5 2025" loading="lazy"><span class="badge">M5 · 2025</span></a>
       <div class="body">
         <a class="tl" href="bmw-m5/"><h2>BMW M5</h2></a>
-        <div class="sub">ביצועי-על · יוקרה · 2025</div>
-        <button class="qbtn" type="button" onclick="openWA('BMW M5 2025')"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c2 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>צרו קשר בוואטסאפ</button>
+        <div class="sub">ביצועי-על · 727 כ״ס · 2025</div>
         <a class="go" href="bmw-m5/">צפייה בדף ←</a>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('BMW M5 2025')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
       </div>
     </div>
 
     <div class="card">
-      <a class="pic" href="bmw-x6-m60i/"><img src="bmw-x6-m60i/slide1.jpg" alt="BMW X6 M60i 2026" loading="lazy"><span class="badge">M60i · 2026</span></a>
+      <div class="pic"><img src="g/mercedes-gt53.jpg" alt="Mercedes-AMG GT 53 2021" loading="lazy"><span class="badge">GT 53 · 2021</span></div>
       <div class="body">
-        <a class="tl" href="bmw-x6-m60i/"><h2>BMW X6 M60i</h2></a>
-        <div class="sub">SUV קופה · M Performance · 2026</div>
-        <button class="qbtn" type="button" onclick="openWA('BMW X6 M60i 2026')"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c2 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>צרו קשר בוואטסאפ</button>
-        <a class="go" href="bmw-x6-m60i/">צפייה בדף ←</a>
+        <h2>Mercedes-AMG GT 53</h2>
+        <div class="sub">4-Door Coupé · AMG · 2021</div>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('Mercedes-AMG GT 53 2021')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
       </div>
     </div>
 
     <div class="card">
-      <a class="pic" href="bmw-m440i-cabrio/"><img src="bmw-m440i-cabrio/slide1.jpg" alt="BMW M440i קבריולט 2026" loading="lazy"><span class="badge">M · 2026</span></a>
+      <div class="pic"><img src="g/bmw-740i.jpg" alt="BMW 740i 2026" loading="lazy"><span class="badge">740i · 2026</span></div>
       <div class="body">
-        <a class="tl" href="bmw-m440i-cabrio/"><h2>BMW M440i קבריולט</h2></a>
-        <div class="sub">קבריולט · M Performance · 2026</div>
-        <button class="qbtn" type="button" onclick="openWA('BMW M440i קבריולט 2026')"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c2 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>צרו קשר בוואטסאפ</button>
-        <a class="go" href="bmw-m440i-cabrio/">צפייה בדף ←</a>
+        <h2>BMW 740i</h2>
+        <div class="sub">סדאן יוקרה · סדרה 7 · 2026</div>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('BMW 740i 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
       </div>
     </div>
 
     <div class="card">
-      <a class="pic" href="mercedes-glc43/"><img src="mercedes-glc43/slide1.jpg" alt="Mercedes-AMG GLC 43 2026" loading="lazy"><span class="badge">AMG · 2026</span></a>
+      <a class="pic" href="mercedes-glc43/"><img src="g/mercedes-glc43.jpg" alt="Mercedes-AMG GLC 43 2026" loading="lazy"><span class="badge">AMG · 2026</span></a>
       <div class="body">
         <a class="tl" href="mercedes-glc43/"><h2>Mercedes-AMG GLC 43</h2></a>
         <div class="sub">AMG 4MATIC⁺ · קופה · 2026</div>
-        <button class="qbtn" type="button" onclick="openWA('Mercedes-AMG GLC 43 קופה 2026')"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c2 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>צרו קשר בוואטסאפ</button>
         <a class="go" href="mercedes-glc43/">צפייה בדף ←</a>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('Mercedes-AMG GLC 43 קופה 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
       </div>
     </div>
 
     <div class="card">
-      <a class="pic" href="mercedes-g450d/"><img src="mercedes-g450d/slide1.jpg" alt="Mercedes-Benz G 450d 2025" loading="lazy"><span class="badge">G-Class · 2025</span></a>
+      <a class="pic" href="bmw-x6-m60i/"><img src="g/bmw-x6-m60i.jpg" alt="BMW X6 M60i 2026" loading="lazy"><span class="badge">M60i · 2026</span></a>
+      <div class="body">
+        <a class="tl" href="bmw-x6-m60i/"><h2>BMW X6 M60i</h2></a>
+        <div class="sub">530 כ״ס · 4.4 Twin Turbo · 2026</div>
+        <a class="go" href="bmw-x6-m60i/">צפייה בדף ←</a>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('BMW X6 M60i 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="pic"><img src="g/mercedes-glc300.jpg" alt="Mercedes GLC 300 AMG" loading="lazy"><span class="badge">GLC 300</span></div>
+      <div class="body">
+        <h2>Mercedes GLC 300</h2>
+        <div class="sub">קופה · AMG-Line · SUV</div>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('Mercedes GLC 300 AMG')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="pic"><img src="g/genesis-gv70.jpg" alt="Genesis GV70 2026" loading="lazy"><span class="badge">GV70 · 2026</span></div>
+      <div class="body">
+        <h2>Genesis GV70</h2>
+        <div class="sub">SUV יוקרה · חדש · 2026</div>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('Genesis GV70 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="pic"><img src="g/jeep-wrangler-392.jpg" alt="Jeep Wrangler Rubicon HEMI 392 2026" loading="lazy"><span class="badge">392 · 2026</span></div>
+      <div class="body">
+        <h2>Jeep Wrangler Rubicon</h2>
+        <div class="sub">HEMI 392 · Final Edition · 2026</div>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('Jeep Wrangler HEMI 392 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="pic"><img src="g/skoda-kodiaq.jpg" alt="Skoda Kodiaq Sportline 2026" loading="lazy"><span class="badge">Sportline</span></div>
+      <div class="body">
+        <h2>Skoda Kodiaq</h2>
+        <div class="sub">Sportline · SUV · 2026</div>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('Skoda Kodiaq Sportline 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="pic" href="bmw-m440i-cabrio/"><img src="g/bmw-m440i-cabrio.jpg" alt="BMW M440i קבריולט 2026" loading="lazy"><span class="badge">M · 2026</span></a>
+      <div class="body">
+        <a class="tl" href="bmw-m440i-cabrio/"><h2>BMW M440i קבריולט</h2></a>
+        <div class="sub">קבריולט · M Performance · 2026</div>
+        <a class="go" href="bmw-m440i-cabrio/">צפייה בדף ←</a>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('BMW M440i קבריולט 2026')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="pic" href="mercedes-g450d/"><img src="g/mercedes-g450d.jpg" alt="Mercedes-Benz G 450d 2025" loading="lazy"><span class="badge">G-Class · 2025</span></a>
       <div class="body">
         <a class="tl" href="mercedes-g450d/"><h2>Mercedes-Benz G 450d</h2></a>
         <div class="sub">יד ראשונה 0 · דיזל · צורה חדשה</div>
-        <button class="qbtn" type="button" onclick="openWA('Mercedes-Benz G 450d 2025')"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c2 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>צרו קשר בוואטסאפ</button>
         <a class="go" href="mercedes-g450d/">צפייה בדף ←</a>
+        <div class="sp"></div>
+        <button class="qbtn" type="button" onclick="openWA('Mercedes-Benz G 450d 2025')"><svg class="wico"><use href="#wa"></use></svg>צרו קשר בוואטסאפ</button>
       </div>
     </div>
+
   </div>
 
   <footer>TAN Luxury Motors · לתיאום: <a href="tel:0523800727">052-3800727</a> · <a href="https://wa.me/972523800727" target="_blank">וואטסאפ</a></footer>
@@ -163,7 +241,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <p class="modal-sub">השאירו טלפון — נחזור אליכם, וייפתח וואטסאפ מיד</p>
     <form id="waForm" onsubmit="return submitWA(event)">
       <input id="waPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="הטלפון שלך">
-      <button class="modal-send" type="submit"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c2 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>שלח בוואטסאפ</button>
+      <button class="modal-send" type="submit"><svg class="wico"><use href="#wa"></use></svg>שלח בוואטסאפ</button>
       <p class="modal-note" id="waNote"></p>
     </form>
   </div>
@@ -187,7 +265,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     var digits = phone.replace(/\D/g, '');
     var note = document.getElementById('waNote');
     if(digits.length < 9){ note.className = 'modal-note'; note.textContent = 'נא להזין טלפון תקין'; return false; }
-    // 1) Send the number to the CRM (source "אתר") — fire-and-forget, keepalive.
     try{
       fetch("https://crmtan.activework.site/api/public/lead", {
         method: "POST", keepalive: true, headers: { "Content-Type": "application/json" },
@@ -195,7 +272,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       }).catch(function(){});
     }catch(e){}
     try{ if(window.fbq) fbq('track', 'Lead'); }catch(e){}
-    // 2) Open WhatsApp with the car + phone prefilled.
+    try{ if(window.ttq) ttq.track('SubmitForm'); }catch(e){}
     var text = "שלום TAN Luxury Motors,\nאני מעוניין/ת ברכב " + _car + ".\n\nטלפון: " + phone;
     window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(text), "_blank");
     note.className = 'modal-note ok'; note.textContent = '✓ פתחנו וואטסאפ — נחזור אליך מיד!';
